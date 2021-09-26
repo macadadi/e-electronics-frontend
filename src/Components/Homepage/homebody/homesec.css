@@ -1,5 +1,6 @@
 .prod-div{
     border-radius: 10px;
+   
 }
 .prod-div img{
     object-fit: contain;
@@ -16,4 +17,16 @@
     border: none;
     font-weight: bolder;
    
+}
+
+.prod-list{
+  
+    align-items: center;
+    box-shadow: -8px 0px 16px 4px rgba(237,212,212,1);
+-webkit-box-shadow: -8px 0px 16px 4px rgba(237,212,212,1);
+-moz-box-shadow: -8px 0px 16px 4px rgba(237,212,212,1);
+}
+
+.brand{
+    max-width: 300px;
 }

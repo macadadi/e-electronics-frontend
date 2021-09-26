@@ -10,13 +10,16 @@ export interface Iproduct{
 
 function ProductList(catalogue :Iproduct) {
     return (
-        <div className="col-md-6 col-lg-3">
-        <div className="prod-div p-2 m-2 pt-1" >
+        <div className="col-md-6 col-lg-4">
+        <div className="prod-div mt-2 p-2 m-2 pt-1 prod-list text-center m-auto " >
             <p>{catalogue.category}</p>
-            <h4>{catalogue.name}</h4>
+            
             <img src={catalogue.url} alt={catalogue.name} />
-            <h5>{catalogue.brand}</h5>
-            <p>{catalogue.price}</p>
+          
+           <h6>{catalogue.name}</h6>
+            <h6>Brand {catalogue.brand}</h6>
+
+            <p>Price Kshs. {catalogue.price}</p>
            
         </div>
     </div>

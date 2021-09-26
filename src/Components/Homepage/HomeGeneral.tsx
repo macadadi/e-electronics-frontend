@@ -39,6 +39,35 @@ function HomeGeneral() {
           action :'Buy Laptops'},
          
     ]
+    const good =[
+        {name :'Washing machine',
+        brand : 'Sony',
+        url : 'https://justmac.com/images/exclusive-sale.png',
+        price : 2456,
+         category :'Home appliences'},
+         {name :'Washing machine',
+         brand : 'Sony',
+         url : 'https://justmac.com/images/exclusive-sale.png',
+         price : 2456,
+          category :'Home appliences'},
+          {name :'Washing machine',
+          brand : 'Sony',
+          url : 'https://justmac.com/images/exclusive-sale.png',
+          price : 2456,
+           category :'Home appliences'},
+           {name :'Washing machine',
+           brand : 'Sony',
+           url : 'https://justmac.com/images/exclusive-sale.png',
+           price : 2456,
+            category :'Home appliences'},
+            {name :'Washing machine',
+            brand : 'Sony',
+            url : 'https://justmac.com/images/exclusive-sale.png',
+            price : 2456,
+             category :'Home appliences'},
+      
+         
+    ]
     return (
         <div>
             <Banner />
@@ -73,8 +102,8 @@ function HomeGeneral() {
             </div>
 
             <div className="row m-2">
-              {goods.map((value,index)=> <ProductList key={index} color={value.color} desc={value.desc} url={value.url} 
-                   action={value.action} category={value.category}/>)}
+              {good.map((value,index)=> <ProductList key={index} price={value.price} brand={value.brand} url={value.url} 
+                   name={value.name} category={value.category}/>)}
                    
             </div>
 

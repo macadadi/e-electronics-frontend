@@ -16,7 +16,7 @@ function ProductCatalogue(catalogue : Icatalogue) {
             <div className="prod-div p-4 m-2 pt-1" style={{backgroundColor:`${catalogue.color}`}}>
                 
                    <h3 className=" text-center">{catalogue.category}</h3>
-                 <div className="d-flex  ">
+                 <div className="d-flex justify-content-center ">
                  {catalogue.desc && catalogue.desc}
                 <img src={catalogue.url} alt={catalogue.action} className="img-fluid "/>
                  </div>
