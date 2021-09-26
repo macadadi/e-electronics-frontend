@@ -1,0 +1,19 @@
+.prod-div{
+    border-radius: 10px;
+}
+.prod-div img{
+    object-fit: contain;
+}
+.prod-div  h3{
+    color: white;
+    font-size: x-large;
+    text-transform: uppercase;
+}
+.btn-div button{
+    min-width: 170px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    font-weight: bolder;
+   
+}

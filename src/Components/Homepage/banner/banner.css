@@ -9,5 +9,31 @@ object-fit: cover;
 }
 .d-block{
     background-color: blue;
-    height: 70vh;
+    height: 50vh;
+}
+
+/* description section */
+.secrip-sec{
+   text-align: center;
+   justify-content: center;
+    height: 100%;
+    background: rgb(25,227,184);
+background: linear-gradient(0deg, rgba(25,227,184,0.4962359943977591) 35%, 
+rgba(110,129,91,0.17130602240896353) 71%);
+}
+
+.promo{
+    font-family: "Courier New", Courier, monospace;
+font-size: 43px;
+letter-spacing: -2.8px;
+word-spacing: 6px;
+color: #000000;
+font-weight: normal;
+text-decoration: none;
+font-style: normal;
+font-variant: normal;
+text-transform: capitalize;
+}
+.product-category-div{
+    text-align: center;
 }

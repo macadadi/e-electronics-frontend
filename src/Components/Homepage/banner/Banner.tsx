@@ -6,10 +6,10 @@ import { desc } from './DescriptiveSection'
 
 
 const user : desc= {
-name :'Adadi',
-location :'kisumu',
+name :'You Talked and We Hard You, Get The Best Offer Now',
+location :'We have physical stores all over the country',
 price : 234,
-description :' A very nice man'
+description :' For Great Job at affordable prices please get intouch with us. We asure you to get the best deal'
 }
 
 const Banner  :React.FC =()=> {
@@ -18,7 +18,7 @@ const Banner  :React.FC =()=> {
             <div className="col-md-6">
                 <Courasol />
             </div>
-            <div className="col-md-6 bg-info">
+            <div className="col-md-6 ">
                 <DescriptiveSection  name={user.name} location={user.location} price={user.price}
                  description={user.description}/>
             </div>
