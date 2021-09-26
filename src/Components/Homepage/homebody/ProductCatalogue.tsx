@@ -15,9 +15,11 @@ function ProductCatalogue(catalogue : Icatalogue) {
         <div className="col-md-6 col-lg-4">
             <div className="prod-div p-4 m-2 pt-1" style={{backgroundColor:`${catalogue.color}`}}>
                 
-                   <h3 className=" text-center">{catalogue.category}</h3>
+                   <h5 className=" text-center ">{catalogue.category}</h5>
                  <div className="d-flex justify-content-center ">
-                 {catalogue.desc && catalogue.desc}
+               <div className="catalog-desc">
+               {catalogue.desc && catalogue.desc}
+               </div>
                 <img src={catalogue.url} alt={catalogue.action} className="img-fluid "/>
                  </div>
                <div className="text-center btn-div"> <button className="p-2 m-4">{catalogue.action}</button></div>

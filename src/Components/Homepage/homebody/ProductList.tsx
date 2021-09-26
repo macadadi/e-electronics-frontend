@@ -17,9 +17,9 @@ function ProductList(catalogue :Iproduct) {
             <img src={catalogue.url} alt={catalogue.name} />
           
            <h6>{catalogue.name}</h6>
-            <h6>Brand {catalogue.brand}</h6>
+            <h6 style={{color:'blue'}}>Brand {catalogue.brand}</h6>
 
-            <p>Price Kshs. {catalogue.price}</p>
+            <p>Price  <b>Kshs. {catalogue.price}</b></p>
            
         </div>
     </div>

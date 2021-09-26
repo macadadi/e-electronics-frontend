@@ -5,7 +5,7 @@
 .prod-div img{
     object-fit: contain;
 }
-.prod-div  h3{
+.prod-div  h5{
     color: white;
     font-size: x-large;
     text-transform: uppercase;
@@ -29,4 +29,13 @@
 
 .brand{
     max-width: 300px;
+}
+
+/* Small screen styling */
+
+@media screen and (max-width :500px) {
+    .catalog-desc{
+        display: none;
+        background-color: black;
+    }
 }
