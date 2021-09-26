@@ -22,3 +22,17 @@
     min-height: 500px;
     
 }
+.border-div{
+    border-bottom: 2px solid whitesmoke;
+    min-height: 100px;
+    align-items: baseline;
+}
+.border-div button{
+    outline: none;
+    border: none;
+    border-radius: 1rem;
+    padding: 5px;
+    min-width: 130px;
+    color: white;
+    background-color: black;
+}
