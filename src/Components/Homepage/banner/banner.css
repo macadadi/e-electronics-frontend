@@ -1,0 +1,10 @@
+.carousel-item{
+height: 50vh;
+background-color: darkblue;
+width: 100vw;
+}
+.carousel-item img{
+
+    display: none;
+  
+}

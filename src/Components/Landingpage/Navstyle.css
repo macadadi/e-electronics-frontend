@@ -1,0 +1,32 @@
+.nav-menu{
+    display: flex;
+    color: white;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,36,14,0.7553396358543417) 38%, 
+    rgba(9,9,121,1) 71%, rgba(0,212,255,1) 100%);
+}
+.nav-menu label{
+    font-size: x-large;
+    background-color:#6dc5dd
+    ;
+    cursor: pointer;
+    padding:10px;
+    border-radius: 10px;
+    margin: 5px;
+    padding-top: 3px;
+    min-width: 100px;
+    max-height: 50px;
+    text-align: center;
+    padding-bottom: 2px;
+    box-shadow: 1px 15px 43px -2px rgba(31,6,6,0.66);
+-webkit-box-shadow: 1px 15px 43px -2px rgba(31,6,6,0.66);
+-moz-box-shadow: 1px 15px 43px -2px rgba(31,6,6,0.66);
+}
+.nav-menu label:hover{
+    color: black;
+    background-color: chocolate;
+}
+.right-section{
+    display: flex;
+    flex-wrap: wrap;
+}
