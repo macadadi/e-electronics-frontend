@@ -4,6 +4,7 @@ import './App.css';
 import HomeGeneral from './Components/Homepage/HomeGeneral';
 import Productfooter from './Components/Landingpage/Productfooter';
 import Productdetail from './Components/productpage/Productdetail';
+import Cartpage from './Components/Cart/Cartpage';
 
 
 function App() {
@@ -11,7 +12,8 @@ function App() {
     <div className="m-2 mt-0 mb-0 ">
    <Navigationbar />
    {/* <HomeGeneral /> */}
-   <Productdetail />
+   {/* <Productdetail /> */}
+   <Cartpage />
    <Productfooter />
     </div>
   );
