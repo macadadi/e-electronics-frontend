@@ -1,3 +1,5 @@
+import {useEffect,useState} from 'react'
+import { useAppDispatch, useAppSelector } from '../../app/hooks'
 import Banner from "./banner/Banner"
 import ProductCatalogue from "./homebody/ProductCatalogue"
 import { Icatalogue } from "./homebody/ProductCatalogue"
@@ -8,7 +10,10 @@ interface Iprop<Icatalogue>{
 }
 
 function HomeGeneral() {
-    const products =[
+    // const [products,setProducts] = useState<Iprop<{}>>()
+    const good = useAppSelector(state=>state.product)
+
+    const product =[
         {color:"blue",
             category : 'Get it deliverd to your place at no extra cost',
          url : 'https://justmac.com/images/exclusive-sale.png',
@@ -39,7 +44,7 @@ function HomeGeneral() {
           action :'Buy Laptops'},
          
     ]
-    const good =[
+    const goodst =[
         {name :'Washing machine',
         brand : 'Sony',
         url : 'https://justmac.com/images/exclusive-sale.png',
@@ -68,6 +73,7 @@ function HomeGeneral() {
       
          
     ]
+     console.log(good)
     return (
         <div>
             <Banner />
@@ -79,7 +85,7 @@ function HomeGeneral() {
             </div>
             
               <div className="row m-2">
-              {products.map((value,index)=> <ProductCatalogue key={index} color={value.color} desc={value.desc} url={value.url} 
+              {product.map((value,index)=> <ProductCatalogue key={index} color={value.color} desc={value.desc} url={value.url} 
                    action={value.action} category={value.category}/>)}
                    
             </div>
@@ -102,8 +108,8 @@ function HomeGeneral() {
             </div>
 
             <div className="row m-2">
-              {good.map((value,index)=> <ProductList key={index} price={value.price} brand={value.brand} url={value.url} 
-                   name={value.name} category={value.category}/>)}
+           {good.status === 'idle' ? <div>NO data</div> : good.status === 'failed' ?
+               <div>Coul not load data </div> : good.product.map((value,index)=><ProductList key={index} catalogue={value}/>)}
                    
             </div>
 

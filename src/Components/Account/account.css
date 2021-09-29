@@ -1,0 +1,31 @@
+.login-form {
+  background-color: whitesmoke;
+  align-items: center;
+  text-align: center;
+  padding: 10% 5%;
+  border-radius: 3%;
+}
+
+.login-form button {
+  background-color: white;
+  width: 80%;
+  max-width: 300px;
+  border-radius: 10px;
+  padding: 2px;
+  color: black;
+  transition: 0.5s all;
+  border: none;
+  outline: none;
+}
+.login-form button:active {
+  transform: scale(0.95);
+  background-color: gray;
+}
+.login-form input {
+  width: 80%;
+  max-width: 300px;
+  border-radius: 10px;
+  padding: 3px 8px;
+  outline: none;
+  border: none;
+}
