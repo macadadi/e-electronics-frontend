@@ -1,7 +1,10 @@
 import React from 'react'
+import { useParams ,match, matchPath} from 'react-router'
 import './singleproduct.css'
 
 function Productdetail() {
+    const param = matchPath
+    console.log('The param are',param)
     return (
         <div className="p-2 m-4">
             <div >
