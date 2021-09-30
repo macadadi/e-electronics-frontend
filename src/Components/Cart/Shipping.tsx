@@ -6,22 +6,22 @@ const Shipping = () => {
            </div>
            <div>
             <div className="d-flex justify-content-between mb-3">
-                <div>
-                        <label>Country</label>
+                <div className="d-flex city">
+                        <label>Street</label>
                         <input type="text" />
                 </div>
-                <div>
-                        <label>City</label>
+                <div className="d-flex city">
+                        <label>Country</label>
                         <input type="text" />
                 </div>
             </div>
          
             <div className="d-flex justify-content-between mb-3">
-                <div >
-                        <label>Street</label>
+                <div className="d-flex city">
+                        <label>City</label>
                         <input type="text" className=""/>
                 </div>
-                <div >
+                <div className="d-flex city">
                         <label>Phone No</label>
                         <input type="text" />
                 </div>

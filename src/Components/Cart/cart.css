@@ -1,3 +1,9 @@
-.invoice{
-    background-color: whitesmoke;
+.invoice {
+  background-color: whitesmoke;
+}
+.city {
+  flex-direction: column;
+}
+.maincart {
+  min-height: 70vh;
 }

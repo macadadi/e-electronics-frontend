@@ -4,7 +4,7 @@ import './cart.css'
 
 const Cartpage = () => {
     return (
-        <div className="m-2">
+        <div className="m-2 maincart">
             <div className="row">
                 <div className="col-md-6 ">
                     <CartDetail />
