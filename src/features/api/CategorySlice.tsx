@@ -25,11 +25,11 @@ const initialState: productState = {
 // will call the thunk with the `dispatch` function as the first argument. Async
 // code can then be executed and other actions can be dispatched. Thunks are
 // typically used to make async requests.
-const url = 'http://localhost:8000/'
-export const fetchdata = createAsyncThunk(
-  'product/fetchdata',
-  async () => {
-    const response = await fetch('http://localhost:8000/', {
+const url = 'http://localhost:8000'
+export const getCategory = createAsyncThunk(
+  'product/getCategory',
+  async (query :string) => {
+    const response = await fetch(`${url}${query}/`, {
         method: "GET",
         headers: {"Content-type": "application/json;charset=UTF-8"}
       })
@@ -38,14 +38,15 @@ export const fetchdata = createAsyncThunk(
             return data.json()
         })
     // The value we return becomes the `fulfilled` action payload
+    console.log(response)
     return response;
   }
 );
 
 
 
-export const productSlice = createSlice({
-  name: 'product',
+export const categorySlice = createSlice({
+  name: 'category',
   initialState,
   // The `reducers` field lets us define reducers and generate associated actions
   reducers: {
@@ -68,14 +69,14 @@ export const productSlice = createSlice({
 
   extraReducers: (result) => {
     result
-      .addCase(fetchdata.pending, (state) => {
+      .addCase(getCategory.pending, (state) => {
         state.status = 'loading';
       })
-      .addCase(fetchdata.fulfilled, (state, action) => {
+      .addCase(getCategory.fulfilled, (state, action) => {
         state.status = 'fullfiled';
         state.product = action.payload;
       })
-      .addCase(fetchdata.rejected, (state) => {
+      .addCase(getCategory.rejected, (state) => {
         state.status = 'failed';
        
       }
@@ -88,8 +89,8 @@ export const productSlice = createSlice({
 // The function below is called a selector and allows us to select a value from
 // the state. Selectors can also be defined inline where they're used instead of
 // in the slice file. For example: `useSelector((state: RootState) => state.counter.value)`
-export const selectCount = (state: RootState) => state.product.product;
+export const selectCount = (state: RootState) => state.category.product;
 
 
 
-export default productSlice.reducer;
+export default categorySlice.reducer;

@@ -9,17 +9,16 @@ function Navigationbar() {
                
              <div>
              <div className="home">
-              <label>Home</label>
+             <Link to="/" > <label onClick={e=>setMenu(!menu)}>Home</label> </Link> 
               </div>
              </div>
                 <div className="w-70 right-section col-sm-7  " style={{top:`${menu ? '40px' :'-2000px'}`}}>
-              <Link to="/" > <label onClick={e=>setMenu(!menu)}>Phones</label> </Link> 
-              <Link to="/details" >  <label onClick={e=>setMenu(!menu)}>Laptops</label> </Link> 
-              <Link to="/details" >  <label onClick={e=>setMenu(!menu)}>Tvs</label> </Link> 
+              <Link to="/category/phone" > <label onClick={e=>setMenu(!menu)}>Phones</label> </Link> 
+              <Link to="/category/laptop" >  <label onClick={e=>setMenu(!menu)}>Laptops</label> </Link> 
+              <Link to="/category/television" >  <label onClick={e=>setMenu(!menu)}>Tvs</label> </Link> 
               <Link to="/cart" >  <label onClick={e=>setMenu(!menu)}>Cart</label> </Link> 
               <Link to="/login" >  <label onClick={e=>setMenu(!menu)}>Login</label> </Link> 
                 </div>
-             
              <div className="menu-btn">
               <button onClick={e=>setMenu(!menu)}>{menu ? 'Close' : 'Open'}</button>
               </div>

@@ -10,6 +10,7 @@ import { fetchdata } from './features/api/ProductSlice';
 import { useAppDispatch } from './app/hooks';
 import { BrowserRouter as Router,Switch,Route} from "react-router-dom";
 import LoginPage from './Components/Account/LoginPage';
+import CategoryListPage from './Components/Homepage/CategoryListPage';
 
 
 
@@ -26,6 +27,7 @@ function App() {
    <Switch>
     <Route exact path='/login' component={LoginPage} />
     <Route exact path='/cart' component={Cartpage} />
+    <Route exact path='/category/:name' component={CategoryListPage} />
     <Route exact path='/details/:id' component={Productdetail} />
     <Route exact path="" component={HomeGeneral} />
 
