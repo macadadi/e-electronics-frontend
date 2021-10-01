@@ -1,23 +1,21 @@
-import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { RootState, AppThunk } from '../../app/store';
-
+import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { RootState, AppThunk } from "../../app/store";
 
 export interface Istock {
   name: string;
-  brand:string ;
-  price:number ;
-  category:string ;
-  description:string ;
-  
+  brand: string;
+  price: number;
+  category: string;
+  description: string;
 }
 export interface productState {
-    status :  'idle' | 'loading' | 'failed' |'fullfiled';
-    product : Istock[] 
+  status: "idle" | "loading" | "failed" | "fullfiled";
+  product: Istock[];
 }
 
 const initialState: productState = {
-  status: 'idle',
-  product :[]
+  status: "idle",
+  product: [],
 };
 
 // The function below is called a thunk and allows us to perform async logic. It
@@ -25,28 +23,23 @@ const initialState: productState = {
 // will call the thunk with the `dispatch` function as the first argument. Async
 // code can then be executed and other actions can be dispatched. Thunks are
 // typically used to make async requests.
-const url = 'http://localhost:8000'
+const url = "http://localhost:8000";
 export const getCategory = createAsyncThunk(
-  'product/getCategory',
-  async (query :string) => {
+  "product/getCategory",
+  async (query: string) => {
     const response = await fetch(`${url}${query}/`, {
-        method: "GET",
-        headers: {"Content-type": "application/json;charset=UTF-8"}
-      })
-        .then(data=>{
-        
-            return data.json()
-        })
+      method: "GET",
+      headers: { "Content-type": "application/json;charset=UTF-8" },
+    }).then((data) => {
+      return data.json();
+    });
     // The value we return becomes the `fulfilled` action payload
-    console.log(response)
     return response;
   }
 );
 
-
-
 export const categorySlice = createSlice({
-  name: 'category',
+  name: "category",
   initialState,
   // The `reducers` field lets us define reducers and generate associated actions
   reducers: {
@@ -65,22 +58,19 @@ export const categorySlice = createSlice({
     //   state.product += action.payload;
     // },
   },
- 
 
   extraReducers: (result) => {
     result
       .addCase(getCategory.pending, (state) => {
-        state.status = 'loading';
+        state.status = "loading";
       })
       .addCase(getCategory.fulfilled, (state, action) => {
-        state.status = 'fullfiled';
+        state.status = "fullfiled";
         state.product = action.payload;
       })
       .addCase(getCategory.rejected, (state) => {
-        state.status = 'failed';
-       
-      }
-      )
+        state.status = "failed";
+      });
   },
 });
 
@@ -90,7 +80,5 @@ export const categorySlice = createSlice({
 // the state. Selectors can also be defined inline where they're used instead of
 // in the slice file. For example: `useSelector((state: RootState) => state.counter.value)`
 export const selectCount = (state: RootState) => state.category.product;
-
-
 
 export default categorySlice.reducer;
